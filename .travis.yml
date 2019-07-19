@@ -6,7 +6,7 @@ services:
 before_install:
   - docker build -t matrodaff/react-test -f ./client/Dockerfile.dev ./client
 
-scripts:
+script:
   - docker run -e CI=true matrodaff/react-test npm test
 
 after_success:
