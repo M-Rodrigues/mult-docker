@@ -8,7 +8,6 @@ before_install:
 scripts:
   - docker run -e CI=true matrodaff/react-test npm test
 
-
 after_success:
   - docker build -t matrodaff/muilt-client ./client
   - docker build -t matrodaff/muilt-nginx ./nginx
