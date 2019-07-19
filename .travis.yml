@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t matrodaff/react-test -f ./client/Dockerfile.def .
+  - docker build -t matrodaff/react-test -f ./client/Dockerfile.dev .
 
 scripts:
   - docker run -e CI=true matrodaff/react-test npm test
